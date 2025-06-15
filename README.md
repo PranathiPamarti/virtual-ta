@@ -151,44 +151,6 @@ Promptfoo will send test questions to your FastAPI endpoint and display the resu
 
 ---
 
-## 🌍 Deployment
-
-This application is currently deployed and accessible publicly using **Ngrok**.
-
-### 🌐 Public URL
-
-> [https://b490-120-138-13-130.ngrok-free.app/docs](https://b490-120-138-13-130.ngrok-free.app/docs)
-
-You can use this endpoint to interact with the Virtual TA API.
-
-> ⚠️ **Note:** This Ngrok link is temporary. If it's not active, please contact me for a refreshed one.
-
----
-
-### 🔧 How to Run Locally
-
-1. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Start the FastAPI server:
-
-```bash
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
-
-3. In a separate terminal, run Ngrok:
-
-```bash
-ngrok http 8000
-```
-
-4. Copy the HTTPS forwarding URL provided by Ngrok (like `https://xxxx.ngrok-free.app`) and open `https://xxxx.ngrok-free.app/docs` in your browser.
-
----
-
 ## 👩‍💻 Author
 
 **Pranathi Pamarti**
@@ -201,5 +163,3 @@ ngrok http 8000
 * TDS course inspiration @ MIT Manipal
 * Data from Anand Sir (scraped lectures + forum)
 * Backed by open-source AI & developer tools
-
-```
