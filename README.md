@@ -110,6 +110,13 @@ SCREENSHOTS
 ![API Demo 2](api-demo2.png)
 
 ![API Demo 3](api-demo3.png)
+
+![UI Demo 1](images/ui-1.png)
+
+![UI Demo 2](images/ui-2.png)
+
+![UI Demo 3](images/ui-3.png)
+
 ---
 
 ## 🧪 Promptfoo Evaluation
