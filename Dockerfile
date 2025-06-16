@@ -4,7 +4,7 @@ FROM python:3.10-slim
 # Set working directory inside the container
 WORKDIR /app
 
-# Install OS dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     libglib2.0-0 \
@@ -14,19 +14,19 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Playwright dependencies and download Chromium
-RUN pip install --no-cache-dir playwright
-RUN playwright install chromium
+# Install Playwright and Chromium dependencies in one layer
+RUN pip install --no-cache-dir playwright && \
+    playwright install chromium
 
-# Copy requirements file and install Python deps
+# Copy and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire app
+# Copy only the necessary files (use .dockerignore to avoid copying junk)
 COPY . .
 
-# Expose the port FastAPI will run on
+# Expose FastAPI's port
 EXPOSE 8000
 
-# Run the app with Uvicorn
+# Start the app
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
