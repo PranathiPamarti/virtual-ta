@@ -1,9 +1,9 @@
----
+
 # 🤖 Virtual TA — Teaching Assistant Automation with FastAPI + Promptfoo
 
 A lightweight, AI-powered **Virtual Teaching Assistant** built using **FastAPI**, designed to answer questions from a course discussion forum and lecture content. This tool supports semantic search, vector-based embeddings, and intelligent responses — perfect for automating TA tasks for university-level courses.
 
----
+
 
 ## 🚀 Features
 
@@ -14,7 +14,7 @@ A lightweight, AI-powered **Virtual Teaching Assistant** built using **FastAPI**
 - 🔍 **Vector similarity matching** using sentence embeddings  
 - 📂 Easily customizable with your own course data  
 
----
+
 
 ## 📁 Project Structure
 
@@ -51,7 +51,7 @@ virtual-ta/
 
 ````
 
----
+
 
 ## ⚙️ Setup Instructions
 
@@ -78,7 +78,7 @@ uvicorn main:app --reload
 
 Visit `http://127.0.0.1:8000/docs` for the interactive API docs.
 
----
+
 
 ## 📬 How to Use
 
@@ -117,7 +117,7 @@ SCREENSHOTS
 
 ![UI Demo 3](images/ui-3.png)
 
----
+
 
 ## 🧪 Promptfoo Evaluation
 
@@ -129,7 +129,7 @@ npx promptfoo eval -c tests/project-tds-virtual-ta-promptfoo.yaml
 
 Promptfoo will send test questions to your FastAPI endpoint and display the results in a tabular format.
 
----
+
 
 ## 💡 How It Works
 
@@ -139,7 +139,7 @@ Promptfoo will send test questions to your FastAPI endpoint and display the resu
 4. The most relevant context is sent to a language model (LLM).
 5. A concise, contextual answer is returned.
 
----
+
 
 ## 🛠 Tech Stack
 
@@ -149,14 +149,14 @@ Promptfoo will send test questions to your FastAPI endpoint and display the resu
 * **Promptfoo**
 * **OpenAI-compatible LLM proxy**
 
----
+
 
 ## 👩‍💻 Author
 
 **Pranathi Pamarti**
 🔗 GitHub: [@PranathiPamarti](https://github.com/PranathiPamarti)
 
----
+
 
 ## 🙌 Acknowledgements
 
