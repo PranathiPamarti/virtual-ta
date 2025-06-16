@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: virtual-ta
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /docs
+    envVars:
+      - key: AIPIPE_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.10.0 
