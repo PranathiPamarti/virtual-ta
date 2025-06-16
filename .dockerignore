@@ -32,13 +32,17 @@ yarn-error.log
 # Data files (exclude if not needed at runtime)
 anand_scraped.jsonl
 discourse_posts.jsonl
+chunks.jsonl
 test.txt
 faiss_index.py
 test_embedding.py
+package-lock.json
+package.json
 
 # Scraper scripts (exclude if not needed at runtime)
 anand_scraper_playwright.py
 discourse_scraper.py
+split_into_chunks.py
 
 # Promptfoo configs (for local eval only)
 project-tds-virtual-ta-promptfoo.yaml
@@ -46,7 +50,9 @@ project-tds-virtual-ta-q1.webp
 
 # Docs
 README.md
-
+api-demo1.png
+api-demo2.png
+api-demo3.png
 # Output folders
 _images_/
 output/
