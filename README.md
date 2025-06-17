@@ -105,11 +105,11 @@ Or test directly from Swagger UI at:
 📍 `http://localhost:8000/docs`
 
 SCREENSHOTS
-![API Demo 1](api-demo1.png)
+![API Demo 1](images/api-demo1.png)
 
-![API Demo 2](api-demo2.png)
+![API Demo 2](images/api-demo2.png)
 
-![API Demo 3](api-demo3.png)
+![API Demo 3](images/api-demo3.png)
 
 ![UI Demo 1](images/ui-1.png)
 
@@ -118,6 +118,15 @@ SCREENSHOTS
 ![UI Demo 3](images/ui-3.png)
 
 ![AFTER DEPLOYING](https://github.com/user-attachments/assets/51530028-777c-461c-9a98-610c46b16fe7)
+
+
+
+
+## Access the website using this link
+https://virtual-ta-on89.onrender.com/
+
+## Send post requests using 
+https://virtual-ta-on89.onrender.com/api
 
 
 
