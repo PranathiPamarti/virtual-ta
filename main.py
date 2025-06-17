@@ -22,8 +22,12 @@ load_dotenv()
 AIPIPE_API_KEY = os.getenv("AIPIPE_API_KEY")
 AIPIPE_LLM_URL = "https://aipipe.org/openai/v1/chat/completions"
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
+# Configure Tesseract path based on environment
+if os.name == 'nt':  # Windows
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+else:  # Linux/Unix
+    pytesseract.pytesseract.tesseract_cmd = 'tesseract'
+    
 HEADERS = {
     "Authorization": AIPIPE_API_KEY,
     "Content-Type": "application/json"
