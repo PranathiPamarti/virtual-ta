@@ -1,8 +1,5 @@
-# Use a lightweight Python base image
-FROM python:3.10-slim
-
-# Set working directory inside the container
-WORKDIR /app
+# Use Python slim image
+FROM python:3.9-slim
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -11,22 +8,21 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxrender1 \
     libxext6 \
-    curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Playwright and Chromium dependencies in one layer
-RUN pip install --no-cache-dir playwright && \
-    playwright install chromium
+# Set working directory
+WORKDIR /app
 
-# Copy and install Python dependencies
-COPY requirements.txt .
+# Copy only necessary files
+COPY . .
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy only the necessary files (use .dockerignore to avoid copying junk)
-COPY . .
+# Clean up Python cache
+RUN find . -type d -name "__pycache__" -exec rm -r {} +
 
-# Expose FastAPI's port
+# Expose port
 EXPOSE 8000
 
-# Start the app
+# Run the application
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
